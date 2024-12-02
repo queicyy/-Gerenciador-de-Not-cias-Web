@@ -39,9 +39,9 @@ function salvarUsuarios($usuarios) {
     $usuarios_em_texto = json_encode($usuarios);
 
     $arquivo = fopen('usuarios.json','w');
-    if ($usuarios) {
+    if ($arquivo) {
         fwrite($arquivo,$usuarios_em_texto);
-        fclose($usuarios);
+        fclose($arquivo);
     }
 }
 // --------- PRESTADOR
